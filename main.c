@@ -18,6 +18,7 @@ int main() {
         printf("7. Filtrar por Categoria\n");
         printf("8. Filtrar por Prioridade e Categoria\n");
         printf("9. Exportar por Prioridade\n");
+        printf("10. Exportar por Categoria\n");
 
  switch (opcao) {
             case 1:
@@ -46,4 +47,7 @@ int main() {
                 break;
             case 9:
                 exportarPorPrioridade(tarefas, numTarefas);
+                break;
+            case 10:
+                exportarPorCategoria(tarefas, numTarefas);
                 break;
