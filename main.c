@@ -19,6 +19,10 @@ int main() {
         printf("8. Filtrar por Prioridade e Categoria\n");
         printf("9. Exportar por Prioridade\n");
         printf("10. Exportar por Categoria\n");
+        printf("11. Exportar por Prioridade e Categoria\n");
+        printf("0. Sair\n");
+        printf("Escolha uma opcao: ");
+        scanf("%d", &opcao);
 
  switch (opcao) {
             case 1:
@@ -51,3 +55,16 @@ int main() {
             case 10:
                 exportarPorCategoria(tarefas, numTarefas);
                 break;
+            case 11:
+                exportarPorPrioridadeECategoria(tarefas, numTarefas);
+                break;
+            case 0:
+                printf("Saindo do programa. Ate mais!\n");
+                break;
+            default:
+                printf("Opcao invalida. Tente novamente.\n");
+        }
+    } while (opcao != 0);
+
+    return 0;
+}
