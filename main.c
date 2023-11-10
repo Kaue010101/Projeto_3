@@ -10,8 +10,11 @@ int main() {
     do {
         printf("\nMenu:\n");
         printf("1. Cadastrar Tarefa\n");
+        printf("2. Listar Tarefas\n");
 
  switch (opcao) {
             case 1:
                 cadastrarTarefa(tarefas, &numTarefas);//função para cadastrar uma nova tarefa
+                break;
+                listarTarefas(tarefas, numTarefas);//função para listar todas as tarefas
                 break;
