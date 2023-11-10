@@ -20,3 +20,5 @@ struct Tarefa {
 void cadastrarTarefa(struct Tarefa tarefas[], int *numTarefas);
 //função para listar todas as tarefas cadastradas
 void listarTarefas(struct Tarefa tarefas[], int numTarefas);
+//função para deletar uma tarefa do sistema
+void deletarTarefa(struct Tarefa tarefas[], int *numTarefas);
