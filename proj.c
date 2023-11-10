@@ -124,3 +124,18 @@ void alterarTarefa(struct Tarefa tarefas[], int numTarefas) {
         printf("Índice inválido!\n");
     }
 }
+
+void filtrarPorPrioridade(struct Tarefa tarefas[], int numTarefas) {
+    // Implementação da função para filtrar tarefas por prioridade
+    int prioridade;
+    printf("Digite a prioridade desejada: ");
+    scanf("%d", &prioridade);
+
+    printf("Tarefas com prioridade %d:\n", prioridade);
+    for (int i = 0; i < numTarefas; i++) {
+        if (tarefas[i].prioridade == prioridade) {
+            printf("Prioridade: %d, Categoria: %s, Estado: %s, Descricao: %s\n",
+                   tarefas[i].prioridade, tarefas[i].categoria, tarefas[i].estado, tarefas[i].descricao);
+        }
+    }
+}
