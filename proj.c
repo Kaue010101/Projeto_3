@@ -154,3 +154,31 @@ void filtrarPorEstado(struct Tarefa tarefas[], int numTarefas) {
         }
     }
 }
+ void filtrarPorCategoria(struct Tarefa tarefas[], int numTarefas) {
+    // Implementação da função para filtrar tarefas por categoria
+    char categoria[50];
+    printf("Digite a categoria desejada: ");
+    scanf("%s", categoria);
+
+    printf("Tarefas com categoria %s, ordenadas por prioridade:\n", categoria);
+
+    // Ordenar tarefas por prioridade (bubble sort, por exemplo)
+    for (int i = 0; i < numTarefas - 1; i++) {
+        for (int j = 0; j < numTarefas - i - 1; j++) {
+            if (tarefas[j].prioridade < tarefas[j + 1].prioridade) {
+                // Trocar as tarefas de posição
+                struct Tarefa temp = tarefas[j];
+                tarefas[j] = tarefas[j + 1];
+                tarefas[j + 1] = temp;
+            }
+        }
+    }
+
+    // Iterar sobre as tarefas e imprimir aquelas com a categoria desejada
+    for (int i = 0; i < numTarefas; i++) {
+        if (compararStrings(tarefas[i].categoria, categoria) == 0) {
+            printf("Prioridade: %d, Categoria: %s, Estado: %s, Descricao: %s\n",
+                   tarefas[i].prioridade, tarefas[i].categoria, tarefas[i].estado, tarefas[i].descricao);
+        }
+    }
+}

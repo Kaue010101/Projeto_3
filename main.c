@@ -15,6 +15,8 @@ int main() {
         printf("4. Alterar Tarefa\n");
         printf("5. Filtrar por Prioridade\n");
         printf("6. Filtrar por Estado\n");
+        printf("7. Filtrar por Categoria\n");
+
  switch (opcao) {
             case 1:
                 cadastrarTarefa(tarefas, &numTarefas);//função para cadastrar uma nova tarefa
@@ -33,4 +35,7 @@ int main() {
                 break;
             case 6:
                 filtrarPorEstado(tarefas, numTarefas);
+                break;
+            case 7:
+                filtrarPorCategoria(tarefas, numTarefas);
                 break;
