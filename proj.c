@@ -58,3 +58,19 @@ void cadastrarTarefa(struct Tarefa tarefas[], int *numTarefas) {
 
     printf("Tarefa cadastrada com sucesso!\n");
 }
+
+//função para listar todas as tarefas cadastradas
+void listarTarefas(struct Tarefa tarefas[], int numTarefas) {
+    if (numTarefas == 0) {
+        printf("A lista de tarefas esta vazia.\n");
+        return;
+    }
+
+    printf("Lista de Tarefas:\n");
+    for (int i = 0; i < numTarefas; i++) {
+        printf("Tarefa %d:\n", i + 1);
+        printf("Prioridade: %d\n", tarefas[i].prioridade);
+        printf("Descricao: %s\n", tarefas[i].descricao);
+        printf("Categoria: %s\n", tarefas[i].categoria);
+    }
+}

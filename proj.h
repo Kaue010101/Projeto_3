@@ -18,3 +18,5 @@ struct Tarefa {
 
 //função para cadastrar uma nova tarefa
 void cadastrarTarefa(struct Tarefa tarefas[], int *numTarefas);
+//função para listar todas as tarefas cadastradas
+void listarTarefas(struct Tarefa tarefas[], int numTarefas);
