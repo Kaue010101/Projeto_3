@@ -16,6 +16,7 @@ int main() {
         printf("5. Filtrar por Prioridade\n");
         printf("6. Filtrar por Estado\n");
         printf("7. Filtrar por Categoria\n");
+        printf("8. Filtrar por Prioridade e Categoria\n");
 
  switch (opcao) {
             case 1:
@@ -38,4 +39,7 @@ int main() {
                 break;
             case 7:
                 filtrarPorCategoria(tarefas, numTarefas);
+                break;
+            case 8:
+                filtrarPorPrioridadeECategoria(tarefas, numTarefas);
                 break;

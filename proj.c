@@ -182,3 +182,22 @@ void filtrarPorEstado(struct Tarefa tarefas[], int numTarefas) {
         }
     }
 }
+void filtrarPorPrioridadeECategoria(struct Tarefa tarefas[], int numTarefas) {
+    // Implementação da função para filtrar tarefas por prioridade e categoria
+    int prioridade;
+    char categoria[50];
+
+    printf("Digite a prioridade desejada: ");
+    scanf("%d", &prioridade);
+
+    printf("Digite a categoria desejada: ");
+    scanf("%s", categoria);
+
+    printf("Tarefas com prioridade %d e categoria %s:\n", prioridade, categoria);
+    for (int i = 0; i < numTarefas; i++) {
+        if (tarefas[i].prioridade == prioridade && compararStrings(tarefas[i].categoria, categoria) == 0) {
+            printf("Prioridade: %d, Categoria: %s, Estado: %s, Descricao: %s\n",
+                   tarefas[i].prioridade, tarefas[i].categoria, tarefas[i].estado, tarefas[i].descricao);
+        }
+    }
+}
