@@ -98,3 +98,29 @@ void deletarTarefa(struct Tarefa tarefas[], int *numTarefas) {
     (*numTarefas)--;
     printf("Tarefa deletada com sucesso!\n");
 }
+
+void alterarTarefa(struct Tarefa tarefas[], int numTarefas) {
+    // Implementação da função para alterar uma tarefa
+    int indice;
+    printf("Digite o índice da tarefa que deseja alterar: ");
+    scanf("%d", &indice);
+
+    if (indice >= 0 && indice < numTarefas) {
+        // Lógica para obter novos valores do usuário e alterar a tarefa
+        printf("Digite a nova prioridade: ");
+        scanf("%d", &tarefas[indice].prioridade);
+
+        printf("Digite a nova categoria: ");
+        scanf("%s", tarefas[indice].categoria);
+
+        printf("Digite o novo estado: ");
+        scanf("%s", tarefas[indice].estado);
+
+        printf("Digite a nova descricao: ");
+        scanf("%s", tarefas[indice].descricao);
+
+        printf("Tarefa alterada com sucesso!\n");
+    } else {
+        printf("Índice inválido!\n");
+    }
+}
